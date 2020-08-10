@@ -2,8 +2,8 @@ import { Vue, Component } from "vue-property-decorator";
 
 @Component({
   components: {
-    "hello-world": () => import("@/components/HelloWorld.vue"),
-  },
+    "hello-world": () => import("@/components/HelloWorld")
+  }
 })
 class Home extends Vue {
   name = "Home";
