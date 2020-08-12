@@ -10,18 +10,21 @@ class Other extends Vue {
 
   sourceData = [
     {
-      id:'1',
-      url:'https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel',
+      id: "1",
+      url:
+        "https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel",
       name: "babel"
     },
     {
-      id:'2',
-      url:"https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript",
+      id: "2",
+      url:
+        "https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript",
       name: " typescript"
     },
     {
-      id:'3',
-      url:"https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router",
+      id: "3",
+      url:
+        "https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router",
       name: "router"
     }
   ];
@@ -29,7 +32,10 @@ class Other extends Vue {
   render() {
     return (
       <div class="about">
-        <show-info sourceData={this.sourceData} showMsg="This is an other page"/>
+        <show-info
+          sourceData={this.sourceData}
+          showMsg="This is an other page"
+        />
       </div>
     );
   }

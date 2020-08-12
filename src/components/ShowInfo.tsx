@@ -1,9 +1,15 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 
+interface Item {
+  url: string;
+  id: string;
+  name: string;
+}
+
 @Component
 class ShowInfo extends Vue {
   @Prop() readonly showMsg!: string;
-  @Prop({ default: () => [] }) readonly sourceData!: any[];
+  @Prop({ default: (): Item[] => [] }) readonly sourceData!: Item[];
 
   render() {
     return (
@@ -13,7 +19,7 @@ class ShowInfo extends Vue {
           {this.sourceData.map(v => (
             <li>
               <a href={v.url} target="_blank" rel="noopener">
-              {v.id}.{v.name}
+                {v.id}.{v.name}
               </a>
             </li>
           ))}
