@@ -5,8 +5,8 @@ import { Vue, Component } from "vue-property-decorator";
     "show-info": () => import("@/components/ShowInfo")
   }
 })
-class Other extends Vue {
-  name = "Other";
+class Example extends Vue {
+  name = "Example";
 
   sourceData = [
     {
@@ -29,10 +29,10 @@ class Other extends Vue {
   render() {
     return (
       <div class="about">
-        <show-info sourceData={this.sourceData} showMsg="This is an other page"/>
+        <show-info sourceData={this.sourceData} showMsg="This is an example page"/>
       </div>
     );
   }
 }
 
-export default Other;
+export default Example;
