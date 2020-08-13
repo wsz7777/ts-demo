@@ -18,7 +18,13 @@ const routes: Array<RouteConfig> = [
   {
     path: "/example",
     name: "Example",
+
     component: () => import("@/views/Example")
+  },
+  {
+    path: "/quill-test",
+    name: "quill-test",
+    component: () => import("@/views/quill-test")
   }
 ];
 
