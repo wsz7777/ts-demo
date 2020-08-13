@@ -1,6 +1,6 @@
-import path = require("path");
-import moment = require("moment");
-
+const path = require("path");
+const moment = require("moment");
+// const webpack = require('webpack');
 process.env.VUE_APP_VERSION = require("./package.json").version;
 process.env.VUE_APP_VER_TIME = moment().format("YYYY-MM-DD");
 
@@ -36,8 +36,33 @@ const vueConfig = {
       .options({
         name: "assets/[name].[hash:8].[ext]"
       });
+
+    // config.module
+    //   .rule("imports-loader")
+    //   .test(/\.(vue|(j|t)sx?)$/)
+    //   .use("imports-loader")
+    //   .loader("imports-loader?window.Quill=quill")
+    //   .end()
+    //   .include.add(path.resolve("./node_modules/quill-image-resize-module"));
   },
 
+  configureWebpack: {
+    // module: {
+    //   rules: [
+    //     {
+    //       test: /\.(vue|(j|t)sx?)$/,
+    //       loader: "imports-loader?window.Quill=quill",
+    //       include: path.resolve("./node_modules/quill-image-resize-module")
+    //     }
+    //   ]
+    // }
+    // plugins: [
+    //   new webpack.ProvidePlugin({
+    //     'window.Quill': 'quill/dist/quill.js',
+    //     'Quill': 'quill/dist/quill.js'
+    //   }),
+    // ]
+  },
 
   css: {
     loaderOptions: {

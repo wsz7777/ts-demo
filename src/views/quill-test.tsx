@@ -3,33 +3,15 @@ import Quill from "quill";
 
 //@ts-ignore
 import { ImageDrop } from "quill-image-drop-module";
-//@ts-nocheck
+//@ts-ignore
+// import { ImageResize } from "quill-image-resize-module";
+// // @ts-nocheck
 import ImageResize from "@taoqf/quill-image-resize-module";
 Quill.register("modules/imageDrop", ImageDrop);
 Quill.register("modules/imageResize", ImageResize);
-// //@ts-ignore
-// import Quill from "quill/core";
-// //@ts-ignore
-// import Toolbar from "quill/modules/toolbar";
-// //@ts-ignore
-// import Snow from "quill/themes/snow";
-// //@ts-ignore
-// import Bold from "quill/formats/bold";
-// //@ts-ignore
-// import Italic from "quill/formats/italic";
-// //@ts-ignore
-// import Header from "quill/formats/header";
 import "quill/dist/quill.core.css";
 import "quill/dist/quill.snow.css";
 import "quill/dist/quill.bubble.css";
-
-// Quill.register({
-//   "modules/toolbar": Toolbar,
-//   "themes/snow": Snow,
-//   "formats/bold": Bold,
-//   "formats/italic": Italic,
-//   "formats/header": Header
-// });
 
 @Component
 class Text extends Vue {
