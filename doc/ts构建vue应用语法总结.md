@@ -6,9 +6,10 @@
 
 ### Prop 
 
-jsx组件传值prop Object结构
+jsx组件传值prop
 
 ```javascript
+//Object options
 {
   props:{
     showMsg:{
@@ -20,12 +21,16 @@ jsx组件传值prop Object结构
     }
   }
 }
+
+//class components
+@Prop(String) showMsg;
+@Prop({default: () => []}) sourceData;
 ```
 
 ts组件传值Prop @Prop
 
 ```javascript
-	@Prop(String) readonly showMsg! : string
+	@Prop() readonly showMsg !: string|number
   @Prop({ default: () => [] }) readonly sourceData!: any[];
 ```
 
@@ -34,13 +39,18 @@ ts组件传值Prop @Prop
 js
 
 ```javascript
+//Object options
 data(){
   return {
-    isShow = false,
-		userName = 'Jhone',
-    userAge = 20
+    isShow : false,
+		userName : 'Jhone',
+    userAge : 20
   }
 }
+
+//class components
+isShow = false
+userName = 'Jhone'
 ```
 
 Ts
@@ -59,10 +69,16 @@ age=20
 js
 
 ```javascript
+//Object options
 methods: {
   renderCanvas(chart){
      chart.tooltip(false);
   }
+}
+
+//class components
+renderCanvas(chart){
+   chart.tooltip(false);
 }
 ```
 
@@ -81,7 +97,16 @@ ts
 js组件引入
 
 ```javascript
-const show-info = () => import("@/components/ShowInfo")
+const showInfo = () => import("@/components/ShowInfo")
+
+//或
+
+@Component({
+  components: {
+    "show-info": () => import("@/components/ShowInfo")
+  }
+})
+
 ```
 
 ts组件引入
@@ -99,6 +124,7 @@ ts组件引入
 Js watch监听数据变化
 
 ```javascript
+//Object options
 watch: {
   timeAmountRange:{
     handler:'onTimeAmountChange',
@@ -108,10 +134,16 @@ watch: {
 }
 
 methods: {
-  onTimeAmountChange(val: any){
+  onTimeAmountChange(val){
     console.log('hhhhh',val)
   }
 }
+
+//class components
+  @Watch("timeAmountRange", { immediate: true, deep: true })
+  onTimeAmountChange(val) {
+    console.log('hhhhh',val)
+  }
 ```
 
 ts @Watch
@@ -128,11 +160,17 @@ ts @Watch
 jsx computed计算属性
 
 ```javascript
+//Object options
 computed: {
   //读取数据
   newValue(){
     return this.value
   }
+}
+
+//class components
+get newValue(){
+  return this.value
 }
 ```
 
@@ -149,6 +187,7 @@ get newValue(){
 js
 
 ```javascript
+//object options结构生命周期
 created(){
   
 },
@@ -158,6 +197,19 @@ updated(){
 mounted(){
   
 },
+  
+//class components
+created(){
+  
+}
+
+updated(){
+  
+}
+
+mounted(){
+  
+}
 ```
 
 Ts
@@ -185,8 +237,15 @@ mounted(){
 Js $emit
 
 ```javascript
+//object options
 itemChange(val) {
   this.$emit("handleOkItem", val)
+}
+
+//class components
+@Emit('handleOkItem')
+itemChange(val){
+  return val
 }
 ```
 
@@ -206,7 +265,11 @@ itemChange(val:any){
   return val
 }
 
-补充传参内容，方式
+@Emit()     //注意：若不定义触发事件名称，父组件绑定的名称必须小写当前事件名称
+itemChange(val:any){
+  return val
+}
+
 ```
 
 ### $refs
@@ -224,7 +287,7 @@ ts 使用$refs需先提前声明
 ```javascript
 //声明  
 $refs!: {
-    eventForm: any;
+    eventForm: any; //HTMLElement
   };
 
 this.$refs.eventForm.validate(valid=>{
@@ -289,16 +352,23 @@ let arr: any[] = ['1',2,'dd']
 
 ```typescript
 interface Item {
+  /** rrr */
   id: string;
   name: string;
-  status: string;
+  status?: string;
 }
 
 let search: Item={
   id:'1',
   name:'Anna',
-  status:'01'
+  //status:'01'
 }
 
+```
+
+忽视ts错误
+
+```javascript
+//@ts-ignore
 ```
 
