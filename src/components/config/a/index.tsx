@@ -1,4 +1,4 @@
-import { Vue, Component, Prop } from "vue-property-decorator";
+import { Vue, Component, Prop, Model } from "vue-property-decorator";
 import { SettingData } from "@/components/config/configModule";
 
 @Component({
@@ -9,16 +9,30 @@ import { SettingData } from "@/components/config/configModule";
 })
 class AIndex extends Vue {
   name = "AIndex";
-  @Prop(Object) readonly moduleData: SettingData | undefined;
+  // @Prop({ type: Object, default: () => ({ imgSrc: "" }) })
+  @Model("item-change", { type: Object, default: () => ({ imgSrc: "" }) })
+  readonly moduleData!: SettingData;
+
+  get moduleDataCopy() {
+    return { ...this.moduleData };
+  }
 
   render() {
     return (
       <div class="AIndex">
         <div class="showBox">
-          <a-show settingData={this.moduleData} />
+          <a-show settingData={this.moduleDataCopy} />
         </div>
         <div class="configBox">
-          <a-config editData={this.moduleData} />
+          <a-config
+            editData={this.moduleDataCopy}
+            on-update={(event: SettingData) => {
+              console.log("data", event);
+              this.$emit("item-change", event);
+            }}
+            // v-model={this.modelDataCopy}
+            // v-model={this.moduleDataCopy}
+          />
         </div>
       </div>
     );

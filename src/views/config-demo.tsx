@@ -14,8 +14,14 @@ class ConfigDemo extends Vue {
   render() {
     return (
       <div class="ConfigDemo">
-        {this.listData.map(v => (
-          <a-index moduleData={v} />
+        {this.listData.map((v: SettingData, i: number) => (
+          <a-index
+            moduleData={v}
+            on-item-change={(event: SettingData) => {
+              console.log("config-demo", event);
+              this.listData.splice(i, 1, event);
+            }}
+          />
         ))}
       </div>
     );
