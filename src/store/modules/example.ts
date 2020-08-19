@@ -1,7 +1,7 @@
 const exampleData = {
   namespaced: true,
-  state : {
-    exampleData:[
+  state: {
+    exampleData: [
       {
         id: "1",
         url:
@@ -22,6 +22,6 @@ const exampleData = {
       }
     ]
   }
-}
+};
 
 export default exampleData;

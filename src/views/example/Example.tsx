@@ -1,6 +1,5 @@
 import { Vue, Component, Watch } from "vue-property-decorator";
-import {namespace} from "vuex-class";
-
+import { namespace } from "vuex-class";
 
 const ExampleData = namespace("example");
 
@@ -61,11 +60,11 @@ class Example extends Vue {
   }
 
   mounted() {
-    console.log('exampleData',this.exampleData)
-    this.sourceData = this.exampleData
-    console.log('ref',this.$refs.content)
-    this.$refs.content.style.marginTop='30px'
-    this.$refs.content.style.color = '#42b983'
+    console.log("exampleData", this.exampleData);
+    this.sourceData = this.exampleData;
+    console.log("ref", this.$refs.content);
+    this.$refs.content.style.marginTop = "30px";
+    this.$refs.content.style.color = "#42b983";
   }
 
   render() {
@@ -76,7 +75,7 @@ class Example extends Vue {
           showMsg={this.newText}
           on-edit-text={this.editHText}
         />
-        <div ref='content'>demo示例</div>
+        <div ref="content">demo示例</div>
       </div>
     );
   }
