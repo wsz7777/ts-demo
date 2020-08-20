@@ -1,0 +1,10 @@
+{
+  "code": "0000",
+  "body": {
+    "pageData": [
+      { "type": "", "name": "a", "imgSrc": "/favicon.ico" },
+      { "type": "", "name": "a", "imgSrc": "/favicon.ico" },
+      { "type": "", "name": "b", "imgSrc": "/favicon.ico" }
+    ]
+  }
+}
