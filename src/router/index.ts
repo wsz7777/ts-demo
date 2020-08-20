@@ -18,8 +18,14 @@ const routes: Array<RouteConfig> = [
   {
     path: "/example",
     name: "Example",
-
     component: () => import("@/views/example/Example"),
+    children: [
+      {
+        path:'/example/prop',
+        name:'Prop',
+        component: () => import("@/views/example/prop")
+      }
+    ]
   },
   {
     path: "/quill-test",
