@@ -1,5 +1,5 @@
 import { Vue, Component } from "vue-property-decorator";
-
+import logo from '../assets/logo.png';
 @Component({
   components: {
     "hello-world": () => import("@/components/HelloWorld")
@@ -11,7 +11,7 @@ class Home extends Vue {
   render() {
     return (
       <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png" />
+        <img alt="Vue logo" src={logo} />
         <hello-world msg="Welcome to Your Vue.js App" />
       </div>
     );

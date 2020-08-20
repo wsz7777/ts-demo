@@ -13,7 +13,8 @@ class App extends Vue {
           <router-link to="/">Home</router-link> |
           <router-link to="/about">About</router-link> |
           <router-link to="/example">Example</router-link>|
-          <router-link to="/text">quill-test</router-link>
+          <router-link to="/text">quill-test</router-link>|
+          {/* <router-link to="/demo/prop">demo</router-link> */}
         </div>
         <router-view />
       </div>
