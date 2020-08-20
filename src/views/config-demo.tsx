@@ -9,7 +9,15 @@ import { SettingData } from "@/components/config/configModule";
 class ConfigDemo extends Vue {
   name = "ConfigDemo";
 
-  listData: SettingData[] = [{ imgSrc: "/favicon.ico" }];
+  listData: SettingData[] = [
+    { imgSrc: "/favicon.ico" },
+    { imgSrc: "/favicon.ico" }
+  ];
+
+  changeItem(itemData: SettingData, index: number) {
+    console.log("config-demo", itemData);
+    this.listData.splice(index, 1, itemData);
+  }
 
   render() {
     return (
@@ -17,10 +25,7 @@ class ConfigDemo extends Vue {
         {this.listData.map((v: SettingData, i: number) => (
           <a-index
             moduleData={v}
-            on-item-change={(event: SettingData) => {
-              console.log("config-demo", event);
-              this.listData.splice(i, 1, event);
-            }}
+            on-item-change={(event: SettingData) => this.changeItem(event, i)}
           />
         ))}
       </div>

@@ -1,5 +1,6 @@
-import { Vue, Component, Prop, Model } from "vue-property-decorator";
+import { Vue, Component, Model } from "vue-property-decorator";
 import { SettingData } from "@/components/config/configModule";
+import S from "./a.module.scss";
 
 @Component({
   components: {
@@ -19,11 +20,11 @@ class AIndex extends Vue {
 
   render() {
     return (
-      <div class="AIndex">
-        <div class="showBox">
+      <div class={S.Box}>
+        <div class={S.showBox}>
           <a-show settingData={this.moduleDataCopy} />
         </div>
-        <div class="configBox">
+        <div class={S.configBox}>
           <a-config
             editData={this.moduleDataCopy}
             on-update={(event: SettingData) => {

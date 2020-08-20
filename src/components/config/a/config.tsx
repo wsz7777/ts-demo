@@ -8,8 +8,8 @@ Vue.use(Input).use(Button);
 class AConfig extends Vue {
   name = "AConfig";
 
-  @Prop({ type: Object, default: () => ({ imgSrc: "" }) })
-  // @Model("update", { type: Object, default: () => ({ imgSrc: "" }) })
+  // @Prop({ type: Object, default: () => ({ imgSrc: "" }) })
+  @Model("update", { type: Object, default: () => ({ imgSrc: "" }) })
   readonly editData!: SettingData;
 
   get modelData() {
