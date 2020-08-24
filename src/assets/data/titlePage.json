@@ -1,0 +1,16 @@
+{
+  "code": "0000",
+  "body": {
+    "pageData": [
+      {
+        "name":"title",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": [
+          { "styleName": "font-size", "defaultValue": "14px" },
+          { "styleName": "font-weight", "defaultValue": "bold" }
+        ]
+      }
+    ]
+  }
+}
