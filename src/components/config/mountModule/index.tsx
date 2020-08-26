@@ -1,5 +1,5 @@
 import { Vue, Component, Model, Prop } from "vue-property-decorator";
-import { SettingData } from "@/components/config/configModule";
+import { ModuleData } from "@/components/config/configModule";
 import lodash from 'lodash'
 import S from "./index.module.scss";
 
@@ -22,7 +22,7 @@ export function createConfigModule({ name }: ConfigModuleOptions) {
     cmpIndex: string | undefined;
 
     @Model("item-change", { type: Object, default: () => ({ imgSrc: "" }) })
-    readonly moduleData!: SettingData;
+    readonly moduleData!: ModuleData;
 
     @Model("change-show", { type: String, default: "" })
     readonly showIndex: string | undefined;
