@@ -27,7 +27,6 @@ export const titleConfig: TitleConfig = {
       optionType: "text",
       defaultValue: "bold",
       label: "字体宽度"
-    },
-    
+    }
   ]
 };

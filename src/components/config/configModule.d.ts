@@ -1,38 +1,45 @@
-export interface SettingData {
+
+export interface Style {
   [key: string]: string;
-  imgSrc: string;
+}
+
+export interface ModuleData {
+  name: string;
+  type: string;
+  title:string;
+  data: any;
+  style: any;
+  options: any;
 }
 /*
  * @description 模块数据 */
-export interface TitleModuleData {
-  name:string;
-  type: string;
+export interface TitleModuleData extends ModuleData {
   data: TitleData;
-  style: TitleStyle[];
-  options?: TitleOptions[];
+  style: TitleStyle;
+  options: TitleOptions;
 }
 export interface TitleData {
-  icon?: string;
+  leftIcon?: string;
+  rightIcon?: string;
   content: string;
 }
 export interface TitleStyle {
-  [key: string]: string|number;
-  styleName: string;
-  defaultValue: string | number;
+  titleSty: Style;
+  imgSty: Style;
+  boxSty: Style;
 }
 export interface TitleOptions {
+  
+}
+export interface TitleConfig {
+  name: string;
+  type: string;
+  title: string;
+  options: TitleConfigOptions[];
+}
+export interface TitleConfigOptions {
   optionName: string;
-  defaultValue: string | number | boolean;
-}
-export interface TitleConfig{
-  name:string;
-  type:string;
-  title:string;
-  options:TitleConfigOptions[];
-}
-export interface TitleConfigOptions{
-  optionName:string;
-  optionType:string;
-  defaultValue:string;
-  label:string;
+  optionType: string;
+  defaultValue: string;
+  label: string;
 }

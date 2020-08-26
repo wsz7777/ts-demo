@@ -1,0 +1,24 @@
+.header{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-bottom:1px solid rgba($color: #000000, $alpha: 0.1);
+}
+.line{
+  width: 100%;
+  padding:10px 15px ;
+  text-align: left;
+  span{
+    font-size:12px;
+    margin-right:5px;
+  }
+  .input{
+    width: 140px;
+  }
+}
+.footer{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-top:1px solid rgba($color: #000000, $alpha: 0.1);
+}

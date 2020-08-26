@@ -1,11 +1,12 @@
 import { Vue, Component, Model, Watch } from "vue-property-decorator";
 import { TitleModuleData } from "@/components/config/configModule";
 import { Input, Button } from "ant-design-vue";
-import lodash from "lodash"
+import S from "../config.module.scss";
+import lodash from "lodash";
 
 Vue.use(Input).use(Button);
 
-@Component 
+@Component
 class AConfig extends Vue {
   name = "AConfig";
 
@@ -14,64 +15,142 @@ class AConfig extends Vue {
     type: Object,
     default: () => ({
       data: { content: "这是标题" },
-      style: [
-        { styleName: "font-size", defaultValue: "14px" },
-        { styleName: "font-weight", defaultValue: "bold" }
-      ]
+      style: {
+        titleSty: {
+          fontWeight: "bold",
+          fontSize: "14px",
+          color: "#243563"
+        }
+      }
     })
   })
   readonly editData!: TitleModuleData;
-  
+
   get modelData() {
     // return Object.assign({}, this.editData);
     return lodash.cloneDeep(this.editData);
   }
-  fontSize = this.modelData.style.find(v => v.styleName === "font-size")
-    ?.defaultValue;
-  fontWeight = this.modelData.style.find(v => v.styleName === "font-weight")
-    ?.defaultValue;
-  @Watch("fontSize", { immediate: true, deep: true })
-  onChangeFontSize(val: any) {
-    //@ts-ignore
-    this.modelData.style.find(
-      v => v.styleName === "font-size"
-    ).defaultValue = val;
-  }
-  @Watch("fontWeight", { immediate: true, deep: true })
-  onChangeFontWeight(val: any) {
-    //@ts-ignore
-    this.modelData.style.find(
-      v => v.styleName === "font-weight"
-    ).defaultValue = val;
-  }
 
   render() {
-    console.log(
-      "JSON.stringify(this.modelData): ",
-      JSON.stringify(this.modelData),
-      this.modelData
-    );
-
     return (
       <div class="AConfig">
-        <p>here config something</p>
+        <div class={S.header}>{this.modelData.title}</div>
 
-        <div>
-          内容
-          <a-input v-model={this.modelData.data.content} />
+        <div class={S.line}>
+          <span>左图标:</span>
+          <a-input
+            size="small"
+            class={S.input}
+            v-model={this.modelData.data.leftIcon}
+          />
         </div>
-        <div>
-          字体大小
-          <a-input v-model={this.fontSize} />
+        <div class={S.line}>
+          <span>右图标:</span>
+          <a-input
+            class={S.input}
+            size="small"
+            v-model={this.modelData.data.rightIcon}
+          />
         </div>
-        <div>字体宽度<a-input v-model={this.fontWeight}></a-input></div>
-        <a-button
-          on-click={() => {
-            this.$emit("update", this.modelData);
-          }}
-        >
-          提交变更
-        </a-button>
+        <div class={S.line}>
+          <span>内容:</span>
+          <a-input
+            class={S.input}
+            size="small"
+            v-model={this.modelData.data.content}
+          />
+        </div>
+        <div class={S.line}>
+          <span>文字宽度:</span>
+          <a-input
+            class={S.input}
+            size="small"
+            v-model={this.modelData.style.titleSty.fontWeight}
+          />
+        </div>
+        <div class={S.line}>
+          <span>文字大小:</span>
+          <a-input
+            class={S.input}
+            size="small"
+            v-model={this.modelData.style.titleSty.fontSize}
+          />
+        </div>
+        <div class={S.line}>
+          <span>字体:</span>
+          <a-input
+            class={S.input}
+            size="small"
+            v-model={this.modelData.style.titleSty.fontFamily}
+          />
+        </div>
+        <div class={S.line}>
+          <span>文字颜色:</span>
+          <a-input
+            class={S.input}
+            size="small"
+            v-model={this.modelData.style.titleSty.color}
+          />
+        </div>
+        <div class={S.line}>
+          <span>图片宽度:</span>
+          <a-input
+            class={S.input}
+            size="small"
+            v-model={this.modelData.style.imgSty.width}
+          />
+        </div>
+        <div class={S.line}>
+          <span>图片高度:</span>
+          <a-input
+            class={S.input}
+            size="small"
+            v-model={this.modelData.style.imgSty.height}
+          />
+        </div>
+        <div class={S.line}>
+          <span>图片与文字间距:</span>
+          <a-input
+            class={S.input}
+            size="small"
+            v-model={this.modelData.style.imgSty.marginRight}
+          />
+        </div>
+        <div class={S.line}>
+          <span>内间距:</span>
+          <a-input
+            class={S.input}
+            size="small"
+            v-model={this.modelData.style.boxSty.padding}
+          />
+        </div>
+        <div class={S.line}>
+          <span>背景图片:</span>
+          <a-input
+            class={S.input}
+            size="small"
+            v-model={this.modelData.style.boxSty.background}
+          />
+        </div>
+        <div class={S.line}>
+          <span>对齐方式:</span>
+          <a-input
+            class={S.input}
+            size="small"
+            v-model={this.modelData.style.boxSty.justifyContent}
+          />
+        </div>
+        <div class={S.footer}>
+          <a-button
+            type="primary"
+            size="small"
+            on-click={() => {
+              this.$emit("update", this.modelData);
+            }}
+          >
+            提交变更
+          </a-button>
+        </div>
       </div>
     );
   }

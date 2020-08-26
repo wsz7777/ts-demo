@@ -3,13 +3,537 @@
   "body": {
     "pageData": [
       {
-        "name":"title",
+        "name": "title",
+        "title": "标题",
+
         "type": "title",
         "data": { "content": "这是标题" },
-        "style": [
-          { "styleName": "font-size", "defaultValue": "14px" },
-          { "styleName": "font-weight", "defaultValue": "bold" }
-        ]
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
+      },
+      {
+        "name": "title",
+        "title": "标题",
+        "type": "title",
+        "data": { "content": "这是标题" },
+        "style": {
+          "imgSty": {
+            "width": "14px",
+            "height": "14px",
+            "marginRight": "10px"
+          },
+          "titleSty": {
+            "fontWeight": "bold",
+            "fontSize": "14px",
+            "color": "#243563"
+          },
+          "boxSty": {
+            "padding": "10px",
+            "justifyContent": "center"
+          }
+        }
       }
     ]
   }
