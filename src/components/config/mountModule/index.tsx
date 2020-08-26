@@ -49,7 +49,7 @@ export function createConfigModule({ name }: ConfigModuleOptions) {
             <div class={S.configBox}>
               <mm-config
                 editData={this.moduleDataCopy}
-                on-update={(event: SettingData) => {
+                on-update={(event: ModuleData) => {
                   console.log("data", event);
                   this.$emit("item-change", event);
                 }}
