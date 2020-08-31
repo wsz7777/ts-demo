@@ -1,6 +1,8 @@
 import { Vue, Component } from "vue-property-decorator";
 import { TitleModuleData } from "@/components/config/configModule";
-import { createConfigModule } from "@/components/config/mountModule";
+// import { createConfigModule } from "@/components/config/mountModule";
+// import { TitleModuleData } from "@/components/config/configModule";
+import { createConfigModule } from "view-config";
 import { Button } from "ant-design-vue";
 import S from "./config-demo.module.scss";
 Vue.use(Button);
