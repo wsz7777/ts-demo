@@ -21,8 +21,8 @@ const routes: Array<RouteConfig> = [
     component: () => import("@/views/example/Example"),
     children: [
       {
-        path:'/example/prop',
-        name:'Prop',
+        path: "/example/prop",
+        name: "Prop",
         component: () => import("@/views/example/prop")
       }
     ]
@@ -31,6 +31,11 @@ const routes: Array<RouteConfig> = [
     path: "/quill-test",
     name: "quill-test",
     component: () => import("@/views/quill-test")
+  },
+  {
+    path: "/vue-tsx-support",
+    name: "vue-tsx-support",
+    component: () => import("@/views/VueTsxSupport")
   }
 ];
 

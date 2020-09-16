@@ -62,6 +62,9 @@ const vueConfig = {
     //     'Quill': 'quill/dist/quill.js'
     //   }),
     // ]
+    resolve: {
+      extensions: [".js", ".vue", ".json", ".ts", ".tsx"] // 加入ts 和 tsx
+    }
   },
 
   css: {
